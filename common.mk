@@ -437,7 +437,7 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Vendor
-$(call inherit-product, vendor/oneplus/sm8350-common/sm8350-common-vendor.mk)
+$(call inherit-product, vendor/oplus/sm8350-common/sm8350-common-vendor.mk)
 
 # Verified Boot
 PRODUCT_COPY_FILES += \
