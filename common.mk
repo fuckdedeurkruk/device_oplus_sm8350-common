@@ -481,8 +481,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Vibrator
+ifeq ($(PRODUCT_BRAND),OnePlus)
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service.oplus
+else
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
+endif
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
