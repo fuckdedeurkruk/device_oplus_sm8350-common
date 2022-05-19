@@ -29,9 +29,11 @@ PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
 
 # Alert Slider
+ifeq ($(PRODUCT_BRAND),OnePlus)
 PRODUCT_PACKAGES += \
     KeyHandler \
     tri-state-key-calibrate
+endif
 
 # APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -363,8 +365,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
 # PowerShare
+ifeq ($(PRODUCT_BRAND),OnePlus)
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.oplus
+endif
 
 # QMI
 PRODUCT_PACKAGES += \
